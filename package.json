@@ -1,0 +1,58 @@
+{
+    "name": "launch-goblin-bot",
+    "version": "1.0.0",
+    "description": "Telegram bot for deploying tokens on Base using Clanker SDK",
+    "type": "module",
+    "main": "index.js",
+    "scripts": {
+        "start": "node index.js",
+        "dev": "nodemon index.js",
+        "simple": "node launch-goblin-simple.js",
+        "simple:dev": "nodemon launch-goblin-simple.js",
+        "enhanced": "node launch-goblin-enhanced.js",
+        "enhanced:dev": "nodemon launch-goblin-enhanced.js",
+        "test": "jest",
+        "test:watch": "jest --watch",
+        "test:ipfs": "node tests/test-ipfs-integration.js",
+        "test:db": "node tests/test-database.js",
+        "test:clanker": "node tests/test-clanker-v4-compliance.js",
+        "test:clanker-v4": "node test-clanker-v4.js",
+        "test:config": "node test-config-validation.js",
+        "test:integration": "node tests/run-all-tests.js"
+    },
+    "keywords": [
+        "telegram",
+        "bot",
+        "blockchain",
+        "clanker",
+        "base",
+        "token"
+    ],
+    "author": "Launch Goblin",
+    "license": "MIT",
+    "dependencies": {
+        "@walletconnect/sign-client": "^2.8.0",
+        "axios": "^1.6.0",
+        "clanker-sdk": "^4.1.20",
+        "dotenv": "^16.3.1",
+        "ethers": "^6.8.1",
+        "express": "^5.1.0",
+        "ipfs-http-client": "^56.0.1",
+        "sqlite3": "^5.1.6",
+        "telegraf": "^4.15.6",
+        "viem": "^2.37.2",
+        "winston": "^3.11.0"
+    },
+    "devDependencies": {
+        "@nomicfoundation/hardhat-toolbox": "^5.0.0",
+        "@openzeppelin/contracts": "^5.4.0",
+        "hardhat": "^2.26.3",
+        "jest": "^29.7.0",
+        "nodemon": "^3.0.1",
+        "webpack": "^5.101.3",
+        "webpack-cli": "^6.0.1"
+    },
+    "engines": {
+        "node": ">=18.0.0"
+    }
+}

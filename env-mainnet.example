@@ -1,0 +1,49 @@
+# Telegram Bot Configuration
+BOT_TOKEN=your_telegram_bot_token_here
+
+# Blockchain Configuration - Base Mainnet
+# Uses Clanker SDK for deployment
+RPC_URL=https://mainnet.base.org
+CHAIN_ID=8453
+BASE_ETH_ADDRESS=0x4200000000000000000000000000000000000006
+
+# Private Keys (for fee collection only - users pay their own gas)
+# DEPLOYER_PRIVATE_KEY=your_deployer_private_key_here  # No longer needed - users pay gas
+TREASURY_PRIVATE_KEY=your_treasury_private_key_here
+
+# Clanker SDK Configuration
+# Same API key works for both mainnet and Base Sepolia testnet
+CLANKER_API_KEY=your_clanker_api_key_here
+
+# Web Server Configuration (for MetaMask/WalletConnect integration)
+WEB_SERVER_PORT=3000
+WEB_APP_URL=http://localhost:3000
+
+# WalletConnect Configuration
+WALLETCONNECT_PROJECT_ID=your_walletconnect_project_id_here
+
+# Database Configuration
+DB_PATH=./data/launch_goblin.db
+
+# IPFS Configuration (optional)
+IPFS_API_URL=https://ipfs.infura.io:5001/api/v0
+IPFS_PROJECT_ID=your_infura_project_id
+IPFS_PROJECT_SECRET=your_infura_project_secret
+
+# Fee Configuration - Clanker v4 Structure
+# 1% total trading fee breakdown:
+# - 0.2% (20%) → Clanker default
+# - 0.3% (30%) → Team wallet  
+# - 0.5% (50%) → Token deployer (creator)
+CREATOR_REWARD_PERCENTAGE=50
+TEAM_REWARD_PERCENTAGE=30
+CLANKER_REWARD_PERCENTAGE=20
+
+# Team wallet address for fee distribution
+TEAM_WALLET_ADDRESS=0x51b072a2d45627e23bF12AB722b7A291684206Eb
+
+# CAT Token Address (for buyback)
+CAT_TOKEN_ADDRESS=0x1234567890123456789012345678901234567890
+
+# Logging
+LOG_LEVEL=info
